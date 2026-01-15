@@ -1,0 +1,74 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "AI-Powered Analytics Dashboard",
+      "description": "Real-time analytics platform with machine learning insights, interactive charts, and predictive modeling. Features automated reporting and custom data visualization.",
+      "image": "/projects/analytics-dashboard.jpg",
+      "technologies": ["React", "TypeScript", "Node.js", "Python", "TensorFlow", "PostgreSQL", "Chart.js"],
+      "github": "https://github.com/ChrisDirksDev/Analytics-Dashboard",
+      "demo": "https://analytics-dashboard.chrisdirks.com/",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "title": "E-Commerce Platform",
+      "description": "Full-featured e-commerce store with Stripe integration, inventory management, and admin dashboard. Built with modern React and Express backend.",
+      "image": "/projects/ecommerce.jpg",
+      "technologies": ["React", "Next.js", "TypeScript", "Node.js", "Stripe", "MongoDB", "Tailwind CSS"],
+      "github": "https://github.com/ChrisDirksDev/Ecommerce-Basic",
+      "demo": "https://ecommerce.chrisdirks.com",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "title": "Task Management System",
+      "description": "Collaborative project management tool with Kanban boards, Gantt charts, team collaboration, and time tracking features.",
+      "image": "/projects/task-manager.jpg",
+      "technologies": ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+      "github": "https://github.com/ChrisDirksDev/Task-Manager",
+      "demo": "https://task-manager.chrisdirks.com",
+      "featured": false
+    },
+    {
+      "id": 5,
+      "title": "Weather Forecast App",
+      "description": "Beautiful weather application with 7-day forecasts, severe weather alerts, interactive radar maps, and location-based recommendations.",
+      "image": "/projects/weather.jpg",
+      "technologies": ["React", "TypeScript", "OpenWeather API", "Mapbox", "Tailwind CSS"],
+      "github": "https://github.com/ChrisDirksDev/Weather-Forecast",
+      "demo": "https://weather-forecast.chrisdirks.com",
+      "featured": false
+    },
+    {
+      "id": 6,
+      "title": "Portfolio CMS",
+      "description": "Headless CMS for managing portfolio content, blog posts, and projects. Features markdown support, media management, and REST API.",
+      "image": "/projects/cms.jpg",
+      "technologies": ["React", "Node.js", "Express", "MongoDB", "TypeScript", "Next.js"],
+      "github": "https://github.com/ChrisDirksDev/CRM",
+      "demo": "https://cms.chrisdirks.com",
+      "featured": false
+    },
+    {
+      "id": 7,
+      "title": "Fitness Tracker",
+      "description": "Health and fitness app with workout logging, nutrition tracking, progress charts, and personalized workout recommendations.",
+      "image": "/projects/fitness.jpg",
+      "technologies": ["React", "TypeScript", "Node.js", "PostgreSQL", "Chart.js"],
+      "github": "https://github.com/ChrisDirksDev/Fitness-Tracker",
+      "demo": "https://fitness-tracker.chrisdirks.com",
+      "featured": false
+    },
+    {
+      "id": 8,
+      "title": "Code Snippet Manager",
+      "description": "Developer tool for organizing and sharing code snippets with syntax highlighting, tags, and search functionality.",
+      "image": "/projects/snippets.jpg",
+      "technologies": ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Monaco Editor"],
+      "github": "https://github.com/ChrisDirksDev/CodeSnippetManager",
+      "demo": "https://code-snippet-manager.chrisdirks.com",
+      "featured": false
+    }
+  ]
+}

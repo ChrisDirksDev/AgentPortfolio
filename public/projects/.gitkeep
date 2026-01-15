@@ -1,0 +1,20 @@
+# Place your project images here
+
+## Image Guidelines
+
+- **Recommended size:** 1200x630px (2:1 aspect ratio)
+- **Format:** JPG or PNG
+- **File naming:** Use lowercase with hyphens (e.g., `my-project.jpg`)
+- **Optimization:** Compress images before uploading
+
+## Example Structure
+
+```
+public/projects/
+├── ecommerce.jpg
+├── task-manager.jpg
+├── ai-generator.jpg
+└── weather-dashboard.jpg
+```
+
+

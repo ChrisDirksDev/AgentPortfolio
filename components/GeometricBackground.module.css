@@ -1,0 +1,213 @@
+.geometricShapes {
+  will-change: transform;
+}
+
+/* Floating animations */
+.float1 {
+  animation: float1 20s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.float2 {
+  animation: float2 25s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.float3 {
+  animation: float3 18s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.float4 {
+  animation: float4 22s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.float5 {
+  animation: float5 24s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.float6 {
+  animation: float6 19s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.float7 {
+  animation: float7 21s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Rotating animations */
+.rotate1 {
+  animation: rotate1 30s linear infinite;
+  transform-origin: 300px 400px;
+}
+
+.rotate2 {
+  animation: rotate2 35s linear infinite;
+  transform-origin: 900px 500px;
+}
+
+.rotate3 {
+  animation: rotate3 25s linear infinite;
+  transform-origin: 600px 200px;
+}
+
+.rotate4 {
+  animation: rotate4 28s linear infinite;
+  transform-origin: 150px 650px;
+}
+
+/* Shifting animations */
+.shift1 {
+  animation: shift1 15s ease-in-out infinite;
+}
+
+.shift2 {
+  animation: shift2 18s ease-in-out infinite;
+}
+
+.shift3 {
+  animation: shift3 20s ease-in-out infinite;
+}
+
+@keyframes float1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate(30px, -40px) rotate(5deg);
+  }
+  66% {
+    transform: translate(-20px, 30px) rotate(-5deg);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50px, 50px) rotate(10deg);
+  }
+}
+
+@keyframes float3 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(40px, -30px) rotate(-8deg);
+  }
+  75% {
+    transform: translate(-30px, 40px) rotate(8deg);
+  }
+}
+
+@keyframes float4 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(25px, -25px) rotate(6deg);
+  }
+}
+
+@keyframes float5 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-35px, 35px) rotate(-6deg);
+  }
+}
+
+@keyframes float6 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(20px, -20px) rotate(12deg);
+  }
+}
+
+@keyframes float7 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  50% {
+    transform: translate(-25px, 25px) rotate(-12deg);
+  }
+}
+
+@keyframes rotate1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate2 {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes rotate3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate4 {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes shift1 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+@keyframes shift2 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes shift3 {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(25px);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .geometricShapes * {
+    animation: none !important;
+  }
+}
+

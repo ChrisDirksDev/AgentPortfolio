@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Default: Lava Glow palette */
+  --color-primary: #F02D3A; /* Hot lava red */
+  --color-secondary: #FF6A3D; /* Burning orange */
+  --color-accent: #FFE26A; /* Warm bright yellow */
+  --color-bg-dark: #0D0D0D; /* Deep charcoal */
+  --color-card: #1A1A1A; /* Slightly lighter charcoal for cards */
+  --color-text: #E4E4E4; /* Soft gray */
+}
+
+body {
+  color: var(--color-text);
+  background: var(--color-bg-dark);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+/* Heading styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-space-grotesk), system-ui, -apple-system, sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+/* Special display headings */
+h1 {
+  font-family: var(--font-playfair), serif;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+/* Body text */
+p,
+span,
+div,
+a,
+button,
+input,
+textarea,
+select,
+label {
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-card);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
