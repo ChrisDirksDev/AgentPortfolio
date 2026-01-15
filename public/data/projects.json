@@ -14,7 +14,7 @@
       "id": 2,
       "title": "E-Commerce Platform",
       "description": "Full-featured e-commerce store with Stripe integration, inventory management, and admin dashboard. Built with modern React and Express backend.",
-      "image": "/projects/ecommerce.jpg",
+      "image": "/projects/ecommerce.png",
       "technologies": ["React", "Next.js", "TypeScript", "Node.js", "Stripe", "MongoDB", "Tailwind CSS"],
       "github": "https://github.com/ChrisDirksDev/Ecommerce-Basic",
       "demo": "https://ecommerce.chrisdirks.com",
