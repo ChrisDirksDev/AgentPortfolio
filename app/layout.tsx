@@ -1,102 +1,57 @@
-import type { Metadata } from "next";
-import { Inter, Space_Grotesk, Playfair_Display } from "next/font/google";
+import type { Metadata, Viewport } from "next";
+import { DM_Sans, Instrument_Serif } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
 
-const inter = Inter({ 
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: "swap",
-});
+const sans = DM_Sans({ subsets: ["latin"], variable: "--font-sans", display: "swap" });
+const serif = Instrument_Serif({ subsets: ["latin"], variable: "--font-serif", weight: "400", display: "swap" });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  variable: "--font-space-grotesk",
-  display: "swap",
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair",
-  display: "swap",
-});
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://chrisdirks.com";
 
 export const metadata: Metadata = {
-  title: "Chris Dirks - Full Stack Developer",
-  description:
-    "Full Stack Developer from Halifax, NS. Building interactive web experiences with React, Next.js, TypeScript, and more.",
-  keywords: [
-    "Chris Dirks",
-    "web developer",
-    "full stack developer",
-    "react",
-    "next.js",
-    "typescript",
-    "halifax",
-    "nova scotia",
-    "frontend developer",
-    "backend developer",
-  ],
-  authors: [{ name: "Chris Dirks" }],
+  metadataBase: new URL(siteUrl),
+  title: "Chris Dirks — Full-Stack Developer & Digital Product Builder",
+  description: "A curated portfolio of thoughtful web applications designed and built by Halifax full-stack developer Chris Dirks.",
+  keywords: ["Chris Dirks", "full-stack developer", "web applications", "Next.js developer", "Halifax developer", "digital product design"],
+  authors: [{ name: "Chris Dirks", url: "https://github.com/ChrisDirksDev" }],
   creator: "Chris Dirks",
-  metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
-  ),
+  alternates: { canonical: "/" },
+  manifest: "/manifest.json",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_CA",
     url: "/",
-    title: "Chris Dirks - Full Stack Developer",
-    description:
-      "Full Stack Developer from Halifax, NS. Building interactive web experiences with React, Next.js, TypeScript, and more.",
-    siteName: "Chris Dirks Portfolio",
-    images: [
-      {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Chris Dirks Portfolio",
-      },
-    ],
+    siteName: "Chris Dirks — Digital Product Portfolio",
+    title: "Chris Dirks — Digital products with a point of view.",
+    description: "Selected full-stack applications, product experiments, and design engineering work.",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Chris Dirks — Digital products with a point of view" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Chris Dirks - Full Stack Developer",
-    description:
-      "Full Stack Developer from Halifax, NS. Building interactive web experiences.",
-    images: ["/og-image.jpg"],
-    creator: "@chrisdirks",
+    title: "Chris Dirks — Digital products with a point of view.",
+    description: "Selected full-stack applications, product experiments, and design engineering work.",
+    images: ["/opengraph-image"],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  robots: { index: true, follow: true },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export const viewport: Viewport = { themeColor: "#10100f", colorScheme: "dark" };
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Chris Dirks",
+  url: siteUrl,
+  jobTitle: "Full-Stack Developer",
+  address: { "@type": "PostalAddress", addressLocality: "Halifax", addressRegion: "Nova Scotia", addressCountry: "CA" },
+  sameAs: ["https://github.com/ChrisDirksDev", "https://www.linkedin.com/in/chris-dirks/"],
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} ${spaceGrotesk.variable} ${playfairDisplay.variable} ${inter.className}`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="dark"
-          forcedTheme="dark"
-          enableSystem={false}
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+    <html lang="en">
+      <body className={`${sans.variable} ${serif.variable}`}>
+        {children}
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c") }} />
       </body>
     </html>
   );

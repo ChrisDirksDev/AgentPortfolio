@@ -1,24 +1,22 @@
-import Hero from "@/components/sections/Hero";
-import About from "@/components/sections/About";
-import Projects from "@/components/sections/Projects";
-import Skills from "@/components/sections/Skills";
-import Contact from "@/components/sections/Contact";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Hero from "@/components/sections/Hero";
+import Projects from "@/components/sections/Projects";
+import About from "@/components/sections/About";
+import Contact from "@/components/sections/Contact";
 
 export default function Home() {
   return (
-    <main
-      className="min-h-screen transition-colors"
-      style={{ backgroundColor: "var(--color-bg-dark)" }}
-    >
+    <>
+      <a className="skip-link" href="#main-content">Skip to content</a>
       <Navbar />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
+      <main id="main-content">
+        <Hero />
+        <Projects />
+        <About />
+        <Contact />
+      </main>
       <Footer />
-    </main>
+    </>
   );
 }
