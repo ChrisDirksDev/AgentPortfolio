@@ -2,6 +2,10 @@
 
 An editorial-style, single-page portfolio for selected full-stack applications and design engineering work.
 
+[View the live portfolio](https://www.chrisdirks.com/)
+
+[![Chris Dirks developer portfolio](docs/screenshots/portfolio.png)](https://www.chrisdirks.com/)
+
 ## Stack
 
 - Next.js 14 App Router and TypeScript
@@ -30,4 +34,4 @@ npm run lint
 npm run build
 ```
 
-The production site is configured for `https://chrisdirks.com`; use `NEXT_PUBLIC_SITE_URL` to override the metadata base URL in another environment.
+The production site is available at [https://www.chrisdirks.com/](https://www.chrisdirks.com/). Use `NEXT_PUBLIC_SITE_URL` to override the metadata base URL in another environment.
