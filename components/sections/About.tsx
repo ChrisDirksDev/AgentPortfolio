@@ -9,7 +9,7 @@ const capabilities = [
 export default function About() {
   return (
     <section className="about section-shell" id="about" aria-labelledby="about-title">
-      <div className="about__intro">
+      <div className="about__intro" data-reveal>
         <p className="eyebrow">Capabilities / About</p>
         <h2 id="about-title">Small studio energy.<br /><em>End-to-end thinking.</em></h2>
         <p className="about__lead">
@@ -20,13 +20,13 @@ export default function About() {
         </p>
       </div>
       <div className="about__body">
-        <figure className="portrait">
+        <figure className="portrait" data-reveal>
           <Image src="/profile-photo.png" alt="Chris Dirks" fill sizes="(max-width: 800px) 100vw, 34vw" className="portrait__image" />
           <figcaption>Based in Halifax · Working worldwide</figcaption>
         </figure>
-        <div className="capabilities">
+        <div className="capabilities" data-stagger>
           {capabilities.map(([number, title, copy]) => (
-            <article key={number}>
+            <article key={number} data-reveal-child>
               <span>{number}</span>
               <div><h3>{title}</h3><p>{copy}</p></div>
             </article>

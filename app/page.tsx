@@ -4,10 +4,12 @@ import Hero from "@/components/sections/Hero";
 import Projects from "@/components/sections/Projects";
 import About from "@/components/sections/About";
 import Contact from "@/components/sections/Contact";
+import MotionController from "@/components/MotionController";
 
 export default function Home() {
   return (
     <>
+      <MotionController />
       <a className="skip-link" href="#main-content">Skip to content</a>
       <Navbar />
       <main id="main-content">

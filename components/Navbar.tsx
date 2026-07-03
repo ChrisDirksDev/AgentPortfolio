@@ -22,6 +22,7 @@ export default function Navbar() {
 
   return (
     <header className="site-header">
+      <div className="scroll-progress" aria-hidden="true" />
       <nav className="navbar section-shell" aria-label="Primary navigation">
         <a className="brand" href="#home" aria-label="Chris Dirks, home">
           <span>CD</span><span>Chris Dirks<br />Digital Studio</span>

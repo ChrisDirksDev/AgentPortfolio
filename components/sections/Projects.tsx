@@ -6,7 +6,7 @@ export default function Projects() {
 
   return (
     <section className="work section-shell" id="work" aria-labelledby="work-title">
-      <header className="section-heading">
+      <header className="section-heading" data-reveal>
         <div>
           <p className="eyebrow">Selected work · 2024—2026</p>
           <h2 id="work-title">Built to be<br /><em>used.</em></h2>
@@ -20,7 +20,7 @@ export default function Projects() {
         ))}
       </div>
 
-      <div className="github-handoff">
+      <div className="github-handoff" data-reveal>
         <div>
           <p className="eyebrow">Beyond the selected work</p>
           <h3>Keep exploring on GitHub.</h3>

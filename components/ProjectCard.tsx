@@ -3,8 +3,8 @@ import type { Project } from "@/data/projects";
 
 export default function ProjectCard({ project, index }: { project: Project; index: number }) {
   return (
-    <article className={`project ${index % 2 ? "project--reverse" : ""}`}>
-      <div className="project__visual">
+    <article className={`project ${index % 2 ? "project--reverse" : ""}`} data-reveal>
+      <div className="project__visual" data-parallax>
         {project.image ? (
           <Image
             src={project.image}
@@ -30,8 +30,8 @@ export default function ProjectCard({ project, index }: { project: Project; inde
           {project.proofPoints.length > 0 && (
             <div className="project__proof-block">
               <p className="project__proof-label">Implementation highlights</p>
-              <ul className="project__proof" aria-label={`${project.title} implementation details`}>
-                {project.proofPoints.map((point) => <li key={point}>{point}</li>)}
+              <ul className="project__proof" aria-label={`${project.title} implementation details`} data-stagger>
+                {project.proofPoints.map((point) => <li key={point} data-reveal-child>{point}</li>)}
               </ul>
             </div>
           )}
@@ -40,8 +40,8 @@ export default function ProjectCard({ project, index }: { project: Project; inde
           <div><span>Focus</span><strong>{project.role}</strong></div>
           <div><span>Stack</span><strong>{project.technologies.slice(0, 4).join(" · ")}</strong></div>
           <p className="project__tools-label">Tools & technologies</p>
-          <ul className="tag-list" aria-label={`${project.title} technologies`}>
-            {project.technologies.map((tech) => <li key={tech}>{tech}</li>)}
+          <ul className="tag-list" aria-label={`${project.title} technologies`} data-stagger>
+            {project.technologies.map((tech) => <li key={tech} data-reveal-child>{tech}</li>)}
           </ul>
         </div>
         <div className="project__actions">
